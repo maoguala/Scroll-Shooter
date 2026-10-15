@@ -23,6 +23,34 @@ A top-down Python Pygame shooter where you control a fly-like ship, dodge enemie
    python game.py
    ```
 
+## Build an executable
+
+If you want to package the game as a Windows `.exe` or a Linux `.out`, use PyInstaller.
+
+1. Install PyInstaller:
+
+   ```bash
+   pip install pyinstaller
+   ```
+
+2. Build for Windows:
+
+   ```bash
+   pyinstaller --onefile --windowed game.py
+   ```
+
+3. Build for Linux:
+
+   ```bash
+   pyinstaller --onefile --windowed --name game.out game.py
+   ```
+
+The generated file will be placed in the `dist/` folder. You can also build from the existing spec file with:
+
+```bash
+pyinstaller game.spec
+```
+
 ## Controls
 
 - Move: Arrow keys or WASD
